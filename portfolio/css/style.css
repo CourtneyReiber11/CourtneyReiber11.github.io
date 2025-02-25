@@ -2,15 +2,15 @@ nav {
     background-color: #0755a7; 
     padding: 10px;
     text-align: left;
-    border-radius: 8px;
+    border-radius: 0;
+    width: 100%;
 }
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 10px 15px;
     display: inline-block;
 }
 nav a:hover {
