@@ -10,11 +10,11 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #f8c8dc; /* Pastel pink */
+    background-color: #b3cde0; 
 }
 tr:nth-child(odd) {
-    background-color: #c8e6c9; /* Pastel green */
+    background-color: #cce7ff;
 }
 tr:nth-child(even) {
-    background-color: #ffdab9; /* Pastel peach */
+    background-color: #99d6ff;
 }
