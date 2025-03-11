@@ -8,6 +8,60 @@
             <link href="css/style.css" rel="stylesheet">
             <!-- This is a comment. It will not be displayed in the browser -->
             <meta name="author" content="Courtney Reiber"/>
+        
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                    background-color: #f4f4f4;
+                }
+                form {
+                    max-width: 600px;
+                    margin: auto;
+                    background: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                }
+                fieldset {
+                    border: none;
+                    margin-bottom: 15px;
+                }
+                legend {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+                label {
+                    display: block;
+                    margin: 10px 0 5px;
+                }
+                input, select, textarea {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+                .radio-group {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                }
+                .btn {
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    width: 100%;
+                }
+                .btn:hover {
+                    background-color: #0056b3;
+                }
+            </style>
         </head>
         <body>
             <header>
@@ -19,9 +73,53 @@
                 </nav>
             </header>
             <main>
-                <h1>Contact Me</h1>
-                <p><a href="mailto:Courtney.reiber@gmail.com">Email Me</a></p>
-                <p><a href="tel:+12081234567">Call Me</a></p>
+                <form action="mailto:courtneyreiber@my.cwi.edu?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
+                    <fieldset>
+                        <legend>How do I contact you?</legend>
+                        <label for="compName">Company Name:</label>
+                        <input type="text" id="compName" name="compName" required>
+                        
+                        <label for="contactPerson">Person to Contact:</label>
+                        <input type="text" id="contactPerson" name="contactPerson" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                    </fieldset>
+            
+                    <fieldset>
+
+                    <label>How did you find me?</label>
+                    <div class="radio-group">
+                    <input type="radio" id="linkedin" name="findMe" value="linkedin" required>
+                    <label for="linkedin">LinkedIn</label>
+                
+                    <input type="radio" id="jobFair" name="findMe" value="jobFair">
+                    <label for="jobFair">Job Fair</label>
+                
+                    <input type="radio" id="cwiPartners" name="findMe" value="cwiPartners">
+                    <label for="cwiPartners">CWI Corporate Partners</label>
+                    </div>
+
+                        <legend>What opportunities are available at your company?</legend>
+                        <label for="opportunity">Type of Opportunity:</label>
+                        <select id="opportunity" name="opportunity" required>
+                            <option value="internship">Internship</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="contract">Contract</option>
+                            <option value="temporary">Temporary</option>
+                            <option value="on-call">On Call</option>
+                        </select>
+            
+                        <label for="message">Additional Details:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </fieldset>
+            
+                    <input type="submit" id="submit" value="Submit" class="btn">
+                </form>  
             </main>
             <footer>
                 <hr/>
