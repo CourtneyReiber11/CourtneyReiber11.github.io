@@ -1,8 +1,11 @@
 /* Practice CustomFonts Style Sheet */
 
-.websafe{
-    font-family: Arial, Courier, "Courier New";
+
+.websafe {
+    font-family: Arial, Helvetica, sans-serif;
 }
 .google {
-    font-family: 'Dosis', Georgia, serif;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Try 200, 300, 400, etc., based on your needs */
 }
