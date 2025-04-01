@@ -61,13 +61,14 @@ footer {
 
   @font-face {
 	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
-		 url('../fonts/Roboto-Medium.woff') format('woff');
+	src: url('../fonts/Roboto-MediumItalic.woff2') format('woff2'),
+		 url('../fonts/Roboto-MediumItalic.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
   }
 
   h2 {
 	font-family: 'Roboto', sans-serif;
+	font-style: italic;
 	font-size: 2em;
   }
