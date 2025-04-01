@@ -1,0 +1,65 @@
+
+/* Courtney Reiber 04/01/2025 */
+
+
+html {
+	background-image: url('../images/jewelry.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+	 
+#outerwrapper {	
+	border-radius: 15%;
+	background: rgba(243,205,170, 0.4);
+	width: 70%;
+	margin: 0 auto
+}
+
+  main {
+	background: linear-gradient(to bottom, #FFFFFF, #F0F9E6);
+	padding: 10px;
+	margin: 20px;
+	border-radius: 2em;
+	font-size: 1.25em;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+
+footer {
+	font-size: 1em;
+	text-align: center;
+	padding-bottom: 10px;
+  }
+
+
+  #necklace {
+	float: left;
+	border-radius: 50%;
+	width: 200px; 
+	height: 200px; 
+	object-fit: cover; 
+  }
+
+  .addrightmargin {
+	margin-right: 10%;
+  }
+
+  nav {
+	font-size: 1.5em;
+	clear: both;
+  }
+  
+  nav ul {
+	list-style-type: none; 
+	padding-left: 30px; 
+	margin: 0;
+  }
+  .pacifico-text {
+	font-family: 'Pacifico', cursive;
+	font-size: 4em;
+  }
+
+  h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+  }
