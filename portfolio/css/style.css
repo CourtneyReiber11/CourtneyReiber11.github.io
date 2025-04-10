@@ -93,15 +93,21 @@ input, select, textarea {
 }
 .projectExamples {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto; 
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .projectBox {
     background: #FFFFFF;
     border: 1px solid #000000;
-    float: left;
     margin: 10px;
     text-align: center;
     width: 31%;
+
+   
 }
 .projectBox h4.semester {
     background:#4a90e2; 
