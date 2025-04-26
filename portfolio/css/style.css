@@ -1,85 +1,114 @@
+
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #f4f4f4;
+    margin: 0;
 }
+
+
 nav {
-    background-color: #0755a7; 
-    padding: 10px;
-    text-align: left;
+    
+    text-align: center;
     border-radius: 0;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* <-- this is the important one for flex! */
 }
+
 nav a {
-    color: white;
+    color: black;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 5px 10px;
     font-weight: bold;
     padding: 10px 15px;
     display: inline-block;
 }
+
 nav a:hover {
-    background-color: #b3cde0; 
-    color: #0755a7;
+    color: grey;
 }
+
 nav a.active {
-    background-color: #4a90e2; 
-    color: white;
+    color: #83c1d8;
 }
+
+.logo {
+    width: 150px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  }
+
+/* Table */
 table {
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 20px auto;
     border-collapse: collapse;
 }
+
 th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
+
 th {
     background-color: #b3cde0;
 }
+
 tr:nth-child(odd) {
     background-color: #cce7ff;
 }
+
 tr:nth-child(even) {
     background-color: #99d6ff; 
 }
+
+/* Form */
 form {
     max-width: 600px;
-    margin: auto;
+    margin: 30px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 fieldset {
     border: none;
     margin-bottom: 15px;
 }
+
 legend {
     font-weight: bold;
     font-size: 1.2em;
 }
+
 label {
     display: block;
     margin: 10px 0 5px;
 }
+
 input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #83c1d8;
     border-radius: 5px;
 }
+
 .radio-group {
     display: flex;
     gap: 15px;
-    align-items: center;
+    align-items: left;
+
 }
+
 .btn {
-    background-color: #007bff;
+    background-color: #83c1d8;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -88,38 +117,45 @@ input, select, textarea {
     border-radius: 5px;
     width: 100%;
 }
+
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #83c1d8;
 }
+
+/* Project Examples */
 .projectExamples {
     width: 90%;
-    margin: 0 auto; 
-    
+    margin: 30px auto;
     display: flex;
     justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
 }
+
 .projectBox {
     background: #FFFFFF;
     border: 1px solid #000000;
-    margin: 10px;
     text-align: center;
-    width: 31%;
-
-   
+    width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
 }
+
 .projectBox h4.semester {
-    background:#4a90e2; 
+    background: #4a90e2; 
     color: #FFFFFF;
     padding: 15px;
 }
+
 .projectBox img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 20px;
 }
+
 .projectBox a.button {
     display: block;
-    width: 40%;
+    width: 60%;
     margin: 10px auto;
     color: #FFFFFF;
     background: #4a90e2;
@@ -127,8 +163,144 @@ input, select, textarea {
     font-weight: bold;
     text-decoration: none;
     border-radius: 15px;
-    padding: 1px;
+    padding: 10px;
 }
+
 footer {
     clear: left;
+    margin-top: 40px;
+    text-align: center;
+}
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.icon{
+    width: 30px;
+  max-width: 100%;
+  height: auto;
+}
+h1#contact{
+    text-align: center;
+  }
+  
+.hero {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    margin-top: 20px;
+}
+
+.hero-text {
+    max-width: 600px; 
+    text-align: left; 
+}
+
+.hero img.responsive-img {
+    max-width: 600px; 
+    height: auto;
+}
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px; /* wider padding for a pill shape */
+    background-color:#5ba5c1 ;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* big border-radius makes it pill-shaped */
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* optional for nice depth */
+}
+
+.hero-btn:hover {
+    background-color: #83c1d8; /* darker on hover */
+}
+.about-hero{
+    text-align: center;
+    color: white;
+    background-color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+    
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    .projectExamples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectBox {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
+    .logo {
+        display: none;
+    }
+    .hero-btn{
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav a {
+        width: 100%; 
+        margin: 5px 0; 
+        text-align: center;
+        padding: 12px 0;
+    }
+    .responsive-img{
+        display: none;
+    }
+    .logo {
+        display: none; 
+    }
+    .icon {
+        display: none;
+    }
+    h1#contact{
+      display:none;
+    }
+    .hero-btn{
+        text-align: center;
+
+    }
+}
+@media screen and (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero img.responsive-img {
+        width: 90%;
+    }
+    .hero-btn{
+        text-align: center;
+
+    }
 }
