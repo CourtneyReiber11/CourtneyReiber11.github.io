@@ -222,15 +222,94 @@ h1#contact{
     background-color: #83c1d8; /* darker on hover */
 }
 .about-hero{
+    background-image: url(../images/hero-image.png);
+    background-size: contain; /* try contain here */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
     text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.about-hero-text {
+    max-width: 80%;
     color: white;
-    background-color: #000000;
-    padding-top: 20px;
-    padding-bottom: 20px;
-   
-    
+    z-index: 2;
 }
 
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+}
+.hero-btn:hover{
+    background-color: white;
+    color: #00a8e6;
+}
+.about-hero .hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+}
+.about-hero .hero-btn:hover {
+    background-color: #00a8e6;
+    color: white;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap; 
+}
+
+.contact-container .about-hero {
+    width: 600px; 
+    height: 600px; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container .about-hero-text {
+    color: white;
+    max-width: 80%;
+    z-index: 2;
+}
+
+.contact-container form {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1440px) {
+    .contact-container .about-hero {
+        display: none;
+    }
+}
 @media screen and (max-width: 768px) {
     table {
         width: 95%;
@@ -248,44 +327,18 @@ h1#contact{
     form {
         width: 90%;
     }
+
     .logo {
         display: none;
     }
-    .hero-btn{
-        text-align: center;
 
+    .hero-btn {
+        text-align: center;
     }
+
+    
 }
 
-@media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    nav a {
-        width: 100%; 
-        margin: 5px 0; 
-        text-align: center;
-        padding: 12px 0;
-    }
-    .responsive-img{
-        display: none;
-    }
-    .logo {
-        display: none; 
-    }
-    .icon {
-        display: none;
-    }
-    h1#contact{
-      display:none;
-    }
-    .hero-btn{
-        text-align: center;
-
-    }
-}
 @media screen and (max-width: 600px) {
     .hero {
         flex-direction: column;
@@ -299,8 +352,43 @@ h1#contact{
     .hero img.responsive-img {
         width: 90%;
     }
-    .hero-btn{
-        text-align: center;
 
+    .hero-btn {
+        text-align: center;
     }
 }
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .responsive-img {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    h1#contact {
+        display: none;
+    }
+
+    .hero-btn {
+        text-align: center;
+    }
+}
+
