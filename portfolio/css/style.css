@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-     padding: 40px 60px;
+     padding: 80px;
     background-color: #f4f4f4;
     margin: 0;
 }
@@ -335,7 +335,10 @@ h1#contact{
     .hero-btn {
         text-align: center;
     }
-
+    
+    body{
+     padding: 80px;
+    }
     
 }
 
