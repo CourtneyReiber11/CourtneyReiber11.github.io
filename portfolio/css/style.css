@@ -5,10 +5,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
 }
+h2.experience {
+    text-align: center;
+}
 h3 {
     text-align: center;
 }
-
 
 nav {
     
