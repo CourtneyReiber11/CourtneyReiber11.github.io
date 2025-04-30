@@ -1,9 +1,12 @@
 
 body {
     font-family: Arial, sans-serif;
-     padding: 80px;
+    padding: 80px;
     background-color: #f4f4f4;
     margin: 0;
+}
+h3 {
+    text-align: center;
 }
 
 
@@ -15,7 +18,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; /* <-- this is the important one for flex! */
+    justify-content: center; 
 }
 
 nav a {
@@ -42,87 +45,130 @@ nav a.active {
   display: block;
   }
 
-/* Table */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
 
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+  table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 th {
-    background-color: #b3cde0;
+    background-color: #83c1d8;
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-tr:nth-child(odd) {
-    background-color: #cce7ff;
+th:first-child {
+    border-top-left-radius: 15px;
+}
+
+th:last-child {
+    border-top-right-radius: 15px;
+}
+
+td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:last-child td {
+    border-bottom: none;
 }
 
 tr:nth-child(even) {
-    background-color: #99d6ff; 
+    background-color: #f9f9f9;
 }
 
-/* Form */
+tr:hover {
+    background-color: #e6f3f8;
+}
+
 form {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 40px auto;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
     border: none;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 legend {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #444;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 16px;
     border: 1px solid #83c1d8;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 .radio-group {
     display: flex;
     gap: 15px;
-    align-items: left;
-
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
 }
 
-.btn {
-    background-color: #83c1d8;
+form .btn {
+    display: inline-block;
+    padding: 10px 30px; 
+    background-color:#5ba5c1 ;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 
-.btn:hover {
+form .btn:hover {
     background-color: #83c1d8;
 }
 
-/* Project Examples */
 .projectExamples {
     width: 90%;
     margin: 30px auto;
@@ -133,38 +179,58 @@ input, select, textarea {
 }
 
 .projectBox {
-    background: #FFFFFF;
-    border: 1px solid #000000;
+    background: #ffffff;
+    border: none;
     text-align: center;
     width: 30%;
     min-width: 250px;
-    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .projectBox h4.semester {
-    background: #4a90e2; 
-    color: #FFFFFF;
-    padding: 15px;
+    background: #83c1d8;
+    color: #ffffff;
+    padding: 12px;
+    margin: -20px -20px 15px -20px; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 1.1em;
 }
 
 .projectBox img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .projectBox a.button {
-    display: block;
-    width: 60%;
-    margin: 10px auto;
-    color: #FFFFFF;
-    background: #4a90e2;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    padding: 10px 24px;
+    color: white;
+    background: #5ba5c1;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
 }
+
+.projectBox a.button:hover {
+    background: #83c1d8;
+}
+
 
 footer {
     clear: left;
@@ -204,26 +270,10 @@ h1#contact{
     max-width: 600px; 
     height: auto;
 }
-.hero-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 30px; /* wider padding for a pill shape */
-    background-color:#5ba5c1 ;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px; /* big border-radius makes it pill-shaped */
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* optional for nice depth */
-}
 
-.hero-btn:hover {
-    background-color: #83c1d8; /* darker on hover */
-}
 .about-hero{
     background-image: url(../images/hero-image.png);
-    background-size: contain; /* try contain here */
+    background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -237,7 +287,6 @@ h1#contact{
 .about-hero-text {
     max-width: 80%;
     color: white;
-    z-index: 2;
 }
 
 .hero-btn {
@@ -256,7 +305,6 @@ h1#contact{
 }
 .about-hero .hero-btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 12px 24px;
     background-color: white;
     color: black;
@@ -293,7 +341,6 @@ h1#contact{
 .contact-container .about-hero-text {
     color: white;
     max-width: 80%;
-    z-index: 2;
 }
 
 .contact-container form {
@@ -307,6 +354,12 @@ h1#contact{
 
 @media screen and (max-width: 1440px) {
     .contact-container .about-hero {
+        display: none;
+    }
+    
+}
+@media screen and (max-width:1100px){
+    .logo {
         display: none;
     }
 }
@@ -328,17 +381,22 @@ h1#contact{
         width: 90%;
     }
 
-    .logo {
-        display: none;
-    }
-
     .hero-btn {
         text-align: center;
     }
     
-    body{
-     padding: 80px;
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
+
+    nav a {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+        padding: 12px 0;
+    }
+    
     
 }
 
@@ -359,28 +417,21 @@ h1#contact{
     .hero-btn {
         text-align: center;
     }
+    .about-hero{
+        background-image: none;
+    }
+    .about-hero h1{
+        color:black;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        width: 100%;
-        margin: 5px 0;
-        text-align: center;
-        padding: 12px 0;
-    }
-
+    
     .responsive-img {
         display: none;
     }
 
-    .logo {
-        display: none;
-    }
 
     .icon {
         display: none;

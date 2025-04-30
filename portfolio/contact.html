@@ -9,53 +9,7 @@
             <!-- This is a comment. It will not be displayed in the browser -->
             <meta name="author" content="Courtney Reiber"/>
         
-            <style>
-                
-                form {
-                    max-width: 600px;
-                    margin: auto;
-                    background: white;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                }
-                fieldset {
-                    border: none;
-                    margin-bottom: 15px;
-                }
-                legend {
-                    font-weight: bold;
-                    font-size: 1.2em;
-                }
-                label {
-                    display: block;
-                    margin: 10px 0 5px;
-                }
-                input, select, textarea {
-                    width: 100%;
-                    padding: 10px;
-                    margin-bottom: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                }
-                .radio-group {
-                    display: flex;
-                    gap: 15px;
-                    align-items: center;
-                }
-                .btn {
-                    background-color: #007bff;
-                    color: white;
-                    border: none;
-                    padding: 10px 15px;
-                    font-size: 1em;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    width: 100%;
-                }
-                .btn:hover {
-                    background-color: #0056b3;
-                }
+            <style> 
             </style>
         </head>
         <body>
@@ -72,11 +26,7 @@
                     <div class="about-hero-text">
                     <h1>Contact me</h1>
                 </div>
-                </div>
-           
-
-            
-            
+                </div>       
 
             </h1>
             <main>
@@ -101,15 +51,11 @@
 
                     <label>How did you find me?</label>
                     <div class="radio-group">
-                    <input type="radio" id="linkedin" name="findMe" value="linkedin" required>
-                    <label for="linkedin">LinkedIn</label>
-                
-                    <input type="radio" id="jobFair" name="findMe" value="jobFair">
-                    <label for="jobFair">Job Fair</label>
-                
-                    <input type="radio" id="cwiPartners" name="findMe" value="cwiPartners">
-                    <label for="cwiPartners">CWI Corporate Partners</label>
-                    </div>
+                        <label><input type="radio" name="findMe" value="linkedin" required> LinkedIn</label>
+                        <label><input type="radio" name="findMe" value="jobFair"> Job Fair</label>
+                        <label><input type="radio" name="findMe" value="cwiPartners"> CWI Corporate Partners</label>
+                      </div>
+                      
 
                         <legend>What opportunities are available at your company?</legend>
                         <label for="opportunity">Type of Opportunity:</label>
