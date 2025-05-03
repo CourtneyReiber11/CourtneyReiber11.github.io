@@ -277,10 +277,13 @@ h1#contact{
     text-decoration: none;
     border-radius: 999px;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
-.hero-btn:hover{
-    background-color: white;
-    color: #00a8e6;
+
+.hero-btn:hover {
+    background-color: white;  
+    color: black;          
+    transform: translateY(-2px);  
 }
 .about-hero-text h1 {
     color: white;
@@ -295,7 +298,7 @@ h1#contact{
     font-weight: bold;
 }
 .about-hero .hero-btn:hover {
-    background-color: #00a8e6;
+    background-color: black;
     color: white;
 }
 .contact-container {
